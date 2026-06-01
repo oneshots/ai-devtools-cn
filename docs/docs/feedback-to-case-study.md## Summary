@@ -1,28 +1,61 @@
+# 从反馈 issue 整理匿名案例
 
-Closes #47.
+这个文档说明维护者如何把一个真实的 feedback issue 整理成可公开发布的匿名案例。
 
-This PR adds a new maintainer guide: docs/feedback-to-case-study.md.
+目标不是原样搬运用户反馈，而是保留可复用的实践经验，同时去除个人信息、组织信息、仓库敏感信息和运行日志中的风险内容。
 
-The guide explains how maintainers can turn feedback issues into anonymized case studies that are safe to publish and useful for future users.
+## 适用场景
 
-## Changes
+当 feedback issue 中包含以下信息时，可以考虑整理成案例：
 
-- Add a step-by-step workflow for converting feedback issues into case studies
-- Define what information should be extracted from feedback
-- Add privacy and sensitive information handling rules
-- Provide a reusable case study structure
-- Add a pre-publish checklist for maintainers
+- 用户使用了某个模板或 CLI 命令
+- 用户描述了真实项目中的问题
+- 用户反馈了模板哪里有效、哪里不好用
+- 用户提供了 issue triage、PR review、CI 排错、文档维护或 release 工作流的使用结果
+- 维护者希望把一次反馈沉淀为后续用户可参考的示例
 
-## Why
+如果反馈只包含一句简单评价，或者缺少可复用信息，可以先回复用户补充细节，不必急着整理成案例。
 
-Feedback issues often contain useful real-world usage signals, but they may also include private project details, user identities, logs, internal URLs, tokens, or organization-specific context.
+## 整理前准备
 
-This guide helps maintainers preserve the reusable learning value while removing sensitive information before publishing the case as documentation.
+在整理案例前，先收集以下材料：
 
-## Validation
+- 原始 feedback issue 链接
+- 用户使用的模板或命令
+- 用户想解决的问题
+- 用户输入了哪些关键信息
+- AI 输出了什么结果
+- 用户最终是否采用了输出
+- 过程中遇到的误差、风险或返工点
 
-- [ ] Markdown lint passes
-- [ ] The guide includes privacy and sensitive information rules
-- [ ] The guide can be copied by maintainers as a repeatable workflow
-- [ ] The case study structure is clear enough for future contributors to reuse
+不要在公开文档中直接复制完整原始 issue。应先完成匿名化和改写。
+
+## 信息提取结构
+
+从 feedback issue 中提取信息时，建议使用下面的结构：
+
+```text
+场景：
+用户在什么项目或维护任务中使用模板？
+
+问题：
+用户原本想解决什么问题？
+
+使用的模板：
+用户使用了哪个模板、CLI 命令或工作流？
+
+输入信息：
+用户提供了哪些必要上下文？
+
+输出结果：
+AI 或模板帮助生成了什么？
+
+人工调整：
+用户或维护者做了哪些修改？
+
+最终效果：
+这次使用是否减少了维护成本、提高了清晰度或发现了风险？
+
+可复用经验：
+未来其他用户可以照搬什么？
 
