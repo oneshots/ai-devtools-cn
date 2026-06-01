@@ -1,0 +1,28 @@
+
+Closes #47.
+
+This PR adds a new maintainer guide: docs/feedback-to-case-study.md.
+
+The guide explains how maintainers can turn feedback issues into anonymized case studies that are safe to publish and useful for future users.
+
+## Changes
+
+- Add a step-by-step workflow for converting feedback issues into case studies
+- Define what information should be extracted from feedback
+- Add privacy and sensitive information handling rules
+- Provide a reusable case study structure
+- Add a pre-publish checklist for maintainers
+
+## Why
+
+Feedback issues often contain useful real-world usage signals, but they may also include private project details, user identities, logs, internal URLs, tokens, or organization-specific context.
+
+This guide helps maintainers preserve the reusable learning value while removing sensitive information before publishing the case as documentation.
+
+## Validation
+
+- [ ] Markdown lint passes
+- [ ] The guide includes privacy and sensitive information rules
+- [ ] The guide can be copied by maintainers as a repeatable workflow
+- [ ] The case study structure is clear enough for future contributors to reuse
+
